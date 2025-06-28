@@ -1,6 +1,6 @@
 ![managing-kubernetes-using-terraform-879](https://github.com/user-attachments/assets/eb67af3c-6496-4ac6-9b2e-858c917ffbb8)
 
-## Kubernetes Provider | Module 
+## Module | Kubernetes Provider
 The Kubernetes provider for Terraform is a plugin that enables full lifecycle management of Kubernetes resources. This provider is maintained internally by HashiCorp.
 
 
