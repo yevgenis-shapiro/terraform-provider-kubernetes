@@ -1,10 +1,12 @@
-provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "my-context"
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.25"  # Adjust to latest stable
+    }
+  }
 }
 
-resource "kubernetes_namespace" "example" {
-  metadata {
-    name = "my-first-namespace"
-  }
+provider "kubernetes" {
+  config_path = "~/.kube/config"  # Or point to another kubeconfig file
 }
