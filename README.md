@@ -23,7 +23,17 @@ terraform apply -var-file="template.tfvars" -auto-approve
 🧩 Config 
 
 ```
-scp -i ~/.ssh/<your pem file> <your pem file> ec2-user@<terraform instance public ip>:/home/ec2-user
-chmod 400 <your pem file>
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.25"  # Adjust to latest stable
+    }
+  }
+}
+
+provider "kubernetes" {
+  config_path = "~/.kube/config"  # Or point to another kubeconfig file
+}
 ```
 
